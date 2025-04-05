@@ -10,13 +10,12 @@ import Foundation
 enum Status {
     case loading
     case failure
-    case success
+    case success([Project])
 }
 
 @MainActor
 class ProjectsViewModel: ObservableObject {
-    
-    @Published var projects: [Project] = []
+
     @Published var status: Status = .loading
     
     let repository: ProjectRepository
@@ -27,7 +26,8 @@ class ProjectsViewModel: ObservableObject {
     
     func fetchProjects() async {
         do {
-            self.projects = try await repository.fetchProjects()
+            let result = try await repository.fetchProjects()
+            self.status = .success(result)
         } catch {
             self.status = .failure
             handleError(error)

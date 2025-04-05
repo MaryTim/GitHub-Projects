@@ -7,24 +7,45 @@
 
 import SwiftUI
 
-struct TrendingProjects: View {
+struct MainView: View {
     
     @StateObject var projectsVM: ProjectsViewModel
     
     var body: some View {
+        Group {
+            switch projectsVM.status {
+            case .loading:
+                Loader()
+            case .failure:
+                EmptyView()
+            case .success(let projects):
+                Projects(projects: projects)
+            }
+        }
+        .task {
+            await projectsVM.fetchProjects()
+        }
+    }
+}
+
+struct Projects: View {
+    
+    let projects: [Project]
+    
+    var body: some View {
         NavigationSplitView {
-            List(projectsVM.projects) { project in
+            List(projects) { project in
                 NavigationLink {
                     ProjectDetails(project: project)
                 } label: {
                     TrendingProjectCell(project: project)
                 }
             }
-            .navigationTitle("Trending Projects")
+            .listStyle(.plain)
+            .navigationTitle("Trending GitHub Projects")
         } detail: {
             Text("Select a Project")
         }
-        .task {
-           await projectsVM.fetchProjects()
-        }
-    }}
+        .accentColor(.black)
+    }
+}

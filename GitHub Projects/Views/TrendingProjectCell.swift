@@ -12,23 +12,20 @@ struct TrendingProjectCell: View {
     let project: Project
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(project.name)
-                .padding(.bottom, 10)
+        VStack(alignment: .leading, spacing: 20) {
+            HStack(spacing: 8) {
+                Image(systemName: Asset.Image.project)
+                    .resizable()
+                    .frame(width: 18, height: 18)
+                Text(project.name)
+                    .font(.headline)
+            }
             Text(project.description)
-            
             HStack {
-                HStack(spacing: 8) {
-                    Circle().fill(Color(hex: project.languageColor ?? "0xFFFFFF"))
-                        .frame(width: 15)
-                    Text(project.language ?? "default")
-                }
+                LanguageView(project: project)
                 Spacer()
-                HStack(spacing: 8) {
-                    Image(systemName: "star")
-                        .frame(width: 15)
-                    Text("\(project.stars)")
-                }
+                PairView(project: project,
+                         imageName: Asset.Image.star)
             }
         }
     }

@@ -11,7 +11,7 @@ import SwiftUI
 struct GitHub_ProjectsApp: App {
     var body: some Scene {
         WindowGroup {
-            TrendingProjects(projectsVM: ProjectsViewModel())
+            MainView(projectsVM: ProjectsViewModel())
         }
     }
 }
