@@ -18,7 +18,7 @@ public protocol Endpoint {
 }
 
 extension Endpoint {
-    func makeUrl() -> URL {
+    func makeUrl() throws -> URL {
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme
         urlComponents.host = host
@@ -27,13 +27,13 @@ extension Endpoint {
             URLQueryItem(name: $0, value: $1)
         })
         guard let url = urlComponents.url else {
-            fatalError()
+            throw HTTPError.invalidUrl
         }
         return url
     }
     
-    func makeUrlRequest() -> URLRequest {
-        let url = makeUrl()
+    func makeUrlRequest() throws -> URLRequest {
+        let url = try makeUrl()
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = httpMethod.rawValue
         urlRequest.allHTTPHeaderFields = headerFields

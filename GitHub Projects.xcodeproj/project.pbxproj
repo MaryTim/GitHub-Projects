@@ -21,6 +21,17 @@
 		A75C0CF12D97D8D400FABEF1 /* HTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C0CF02D97D8D400FABEF1 /* HTTPService.swift */; };
 		A75C0CF32D97DAD100FABEF1 /* URLSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C0CF22D97DAD100FABEF1 /* URLSession+Extensions.swift */; };
 		A75C0CF52D97DB0300FABEF1 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75C0CF42D97DB0300FABEF1 /* URLSessionProtocol.swift */; };
+		A772B1EE2DA04C2400DDAACC /* ProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B1ED2DA04C2400DDAACC /* ProjectRepository.swift */; };
+		A772B1F02DA057B700DDAACC /* ProjectRepositoryError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B1EF2DA057B700DDAACC /* ProjectRepositoryError.swift */; };
+		A772B1F22DA0580200DDAACC /* ProjectEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B1F12DA0580200DDAACC /* ProjectEndpoint.swift */; };
+		A772B1F42DA0596300DDAACC /* DefaultProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B1F32DA0596300DDAACC /* DefaultProjectRepository.swift */; };
+		A772B1F92DA1419600DDAACC /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B1F82DA1419600DDAACC /* Project.swift */; };
+		A772B1FB2DA145DC00DDAACC /* DefaultHTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B1FA2DA145DC00DDAACC /* DefaultHTTPService.swift */; };
+		A772B1FE2DA14C1200DDAACC /* TrendingProjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B1FD2DA14C1200DDAACC /* TrendingProjects.swift */; };
+		A772B2002DA14C2200DDAACC /* ProjectDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B1FF2DA14C2200DDAACC /* ProjectDetails.swift */; };
+		A772B2032DA1503500DDAACC /* ProjectsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2022DA1503500DDAACC /* ProjectsViewModel.swift */; };
+		A772B2052DA18CAA00DDAACC /* TrendingProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2042DA18CAA00DDAACC /* TrendingProjectCell.swift */; };
+		A772B2072DA18F9700DDAACC /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2062DA18F9600DDAACC /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +69,17 @@
 		A75C0CF02D97D8D400FABEF1 /* HTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPService.swift; sourceTree = "<group>"; };
 		A75C0CF22D97DAD100FABEF1 /* URLSession+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extensions.swift"; sourceTree = "<group>"; };
 		A75C0CF42D97DB0300FABEF1 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
+		A772B1ED2DA04C2400DDAACC /* ProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRepository.swift; sourceTree = "<group>"; };
+		A772B1EF2DA057B700DDAACC /* ProjectRepositoryError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectRepositoryError.swift; sourceTree = "<group>"; };
+		A772B1F12DA0580200DDAACC /* ProjectEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEndpoint.swift; sourceTree = "<group>"; };
+		A772B1F32DA0596300DDAACC /* DefaultProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProjectRepository.swift; sourceTree = "<group>"; };
+		A772B1F82DA1419600DDAACC /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
+		A772B1FA2DA145DC00DDAACC /* DefaultHTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHTTPService.swift; sourceTree = "<group>"; };
+		A772B1FD2DA14C1200DDAACC /* TrendingProjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingProjects.swift; sourceTree = "<group>"; };
+		A772B1FF2DA14C2200DDAACC /* ProjectDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetails.swift; sourceTree = "<group>"; };
+		A772B2022DA1503500DDAACC /* ProjectsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewModel.swift; sourceTree = "<group>"; };
+		A772B2042DA18CAA00DDAACC /* TrendingProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingProjectCell.swift; sourceTree = "<group>"; };
+		A772B2062DA18F9600DDAACC /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,12 +130,17 @@
 		A75C0CBB2D97D62F00FABEF1 /* GitHub Projects */ = {
 			isa = PBXGroup;
 			children = (
+				A772B2012DA1502100DDAACC /* ViewModels */,
+				A772B1FC2DA14BE400DDAACC /* Views */,
+				A772B1F52DA059BB00DDAACC /* Models */,
+				A772B1EC2DA04C0000DDAACC /* Repository */,
 				A75C0CE92D97D7FD00FABEF1 /* Networking */,
 				A75C0CE62D97D72E00FABEF1 /* Navigation */,
 				A75C0CBC2D97D62F00FABEF1 /* GitHub_ProjectsApp.swift */,
 				A75C0CBE2D97D62F00FABEF1 /* ContentView.swift */,
 				A75C0CC02D97D63000FABEF1 /* Assets.xcassets */,
 				A75C0CC22D97D63000FABEF1 /* Preview Content */,
+				A772B2062DA18F9600DDAACC /* Color+Extensions.swift */,
 			);
 			path = "GitHub Projects";
 			sourceTree = "<group>";
@@ -160,8 +187,46 @@
 				A75C0CF02D97D8D400FABEF1 /* HTTPService.swift */,
 				A75C0CF22D97DAD100FABEF1 /* URLSession+Extensions.swift */,
 				A75C0CF42D97DB0300FABEF1 /* URLSessionProtocol.swift */,
+				A772B1FA2DA145DC00DDAACC /* DefaultHTTPService.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		A772B1EC2DA04C0000DDAACC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A772B1ED2DA04C2400DDAACC /* ProjectRepository.swift */,
+				A772B1EF2DA057B700DDAACC /* ProjectRepositoryError.swift */,
+				A772B1F12DA0580200DDAACC /* ProjectEndpoint.swift */,
+				A772B1F32DA0596300DDAACC /* DefaultProjectRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A772B1F52DA059BB00DDAACC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A772B1F82DA1419600DDAACC /* Project.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A772B1FC2DA14BE400DDAACC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A772B1FD2DA14C1200DDAACC /* TrendingProjects.swift */,
+				A772B1FF2DA14C2200DDAACC /* ProjectDetails.swift */,
+				A772B2042DA18CAA00DDAACC /* TrendingProjectCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A772B2012DA1502100DDAACC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A772B2022DA1503500DDAACC /* ProjectsViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,14 +359,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A772B1FB2DA145DC00DDAACC /* DefaultHTTPService.swift in Sources */,
+				A772B1F22DA0580200DDAACC /* ProjectEndpoint.swift in Sources */,
 				A75C0CF52D97DB0300FABEF1 /* URLSessionProtocol.swift in Sources */,
 				A75C0CF32D97DAD100FABEF1 /* URLSession+Extensions.swift in Sources */,
 				A75C0CE82D97D74200FABEF1 /* Route.swift in Sources */,
+				A772B1FE2DA14C1200DDAACC /* TrendingProjects.swift in Sources */,
 				A75C0CBF2D97D62F00FABEF1 /* ContentView.swift in Sources */,
+				A772B1F02DA057B700DDAACC /* ProjectRepositoryError.swift in Sources */,
+				A772B2002DA14C2200DDAACC /* ProjectDetails.swift in Sources */,
+				A772B1F42DA0596300DDAACC /* DefaultProjectRepository.swift in Sources */,
+				A772B2032DA1503500DDAACC /* ProjectsViewModel.swift in Sources */,
 				A75C0CED2D97D83D00FABEF1 /* HTTPMethod.swift in Sources */,
+				A772B1F92DA1419600DDAACC /* Project.swift in Sources */,
 				A75C0CEB2D97D81100FABEF1 /* Endpoint.swift in Sources */,
 				A75C0CEF2D97D89000FABEF1 /* HTTPError.swift in Sources */,
+				A772B2072DA18F9700DDAACC /* Color+Extensions.swift in Sources */,
+				A772B1EE2DA04C2400DDAACC /* ProjectRepository.swift in Sources */,
 				A75C0CF12D97D8D400FABEF1 /* HTTPService.swift in Sources */,
+				A772B2052DA18CAA00DDAACC /* TrendingProjectCell.swift in Sources */,
 				A75C0CBD2D97D62F00FABEF1 /* GitHub_ProjectsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
