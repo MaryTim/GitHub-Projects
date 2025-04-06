@@ -23,9 +23,10 @@ extension Endpoint {
         urlComponents.scheme = scheme
         urlComponents.host = host
         urlComponents.path = path
-        urlComponents.queryItems = queryItems?.map({
-            URLQueryItem(name: $0, value: $1)
-        })
+        urlComponents.queryItems = queryItems?.compactMap { key, value in
+            guard let value else { return nil }
+            return URLQueryItem(name: key, value: value)
+        }
         guard let url = urlComponents.url else {
             throw HTTPError.invalidUrl
         }

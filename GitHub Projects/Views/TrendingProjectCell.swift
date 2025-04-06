@@ -28,5 +28,6 @@ struct TrendingProjectCell: View {
                          imageName: Asset.Image.star)
             }
         }
+        .padding(.vertical, 10)
     }
 }

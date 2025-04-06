@@ -20,7 +20,7 @@ struct Loader: View {
                 ForEach(0..<count, id: \.self) { index in
                     Image(Asset.Image.githubLogo)
                         .resizable()
-                        .frame(width: 30, height: 30)
+                        .frame(width: 25, height: 25)
                         .clipShape(Circle())
                         .scaleEffect(loading ? 2 : 1)
                         .animation(.easeInOut(duration: 0.8)
