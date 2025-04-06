@@ -22,8 +22,10 @@ struct ProjectDetails: View {
                     .padding(.bottom, 20)
                 
                 LanguageView(project: project)
+                
                 PairView(project: project,
                          imageName: Asset.Image.star)
+                
                 PairView(project: project,
                          imageName: Asset.Image.fork)
                 
@@ -34,13 +36,14 @@ struct ProjectDetails: View {
                             HStack(spacing: 5) {
                                 AsyncImage(url: URL(string: author.avatar)) { image in
                                     image.resizable()
+                                        .frame(width: 50, height: 50)
                                 } placeholder: {
                                     Image(systemName: Asset.Image.avatarPlaceholder)
                                         .resizable()
                                         .frame(width: 50, height: 50)
                                 }
-                                .frame(width: 50, height: 50)
                                 .clipShape(.circle)
+                                
                                 Text(author.username)
                             }
                         }
@@ -50,7 +53,7 @@ struct ProjectDetails: View {
             }
             .padding(15)
         }
-        
+        .background(Color(Asset.Color.backgroundColor))
     }
 }
 

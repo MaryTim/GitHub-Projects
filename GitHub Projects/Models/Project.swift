@@ -28,25 +28,3 @@ struct Author: Codable, Identifiable {
     let href: String
     let avatar: String
 }
-
-//struct Project: Codable {
-//    let author: String
-//    let rank: Int
-//    let username: String
-//    let repositoryName: String
-//    let url: String
-//    let description: String
-//    let language: String
-//    let languageColor: String
-//    let totalStars: Int
-//    let forks: Int
-//    let StarsSince: Int
-//    let since: Int
-//    let builtBy: [Author]
-//}
-//
-//struct Author: Codable {
-//    let username: String
-//    let url: String
-//    let avatar: String
-//}

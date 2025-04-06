@@ -13,8 +13,11 @@ enum Asset {
         static let avatarPlaceholder = "person.circle"
         static let star = "star"
         static let fork = "tuningfork"
-        static let githubLogo = "github-logo"
+        static let githubLogo = "gitHubLogo"
+        static let sadGithubLogo = "sadLogo"
         static let project = "book.closed.fill"
+        static let light = "sun.max.fill"
+        static let dark = "moon.fill"
     }
     
     enum Text {
@@ -22,6 +25,7 @@ enum Asset {
     }
     
     enum Color {
-        static let defaultColor = "0xFFFFFF"
+        static let defaultColor = "#808080"
+        static let backgroundColor = "backgroundColor"
     }
 }

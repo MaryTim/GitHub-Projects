@@ -9,7 +9,7 @@ import Foundation
 
 enum Status {
     case loading
-    case failure
+    case failure(String)
     case success([Project])
 }
 
@@ -17,7 +17,6 @@ enum Status {
 class ProjectsViewModel: ObservableObject {
 
     @Published var status: Status = .loading
-    
     let repository: ProjectRepository
     
     init(repository: ProjectRepository = DefaultProjectRepository()) {
@@ -26,29 +25,30 @@ class ProjectsViewModel: ObservableObject {
     
     func fetchProjects() async {
         do {
+            self.status = .loading
             let result = try await repository.fetchProjects()
             self.status = .success(result)
         } catch {
-            self.status = .failure
-            handleError(error)
+            let message = handleError(error)
+            self.status = .failure(message)
         }
     }
     
-    func handleError(_ error: Error) {
+    func handleError(_ error: Error) -> String {
         if let repositoryError = error as? ProjectRepositoryError {
             switch repositoryError {
             case .fetchFailure:
-                print("fetch failure")
+                return "Failed to fetch data. Please try again later"
             case .decodeFailure:
-                print("decode failure")
+                return "Failed to decode data"
             }
         } else if let httperror = error as? HTTPError {
             switch httperror {
             case .invalidUrl:
-                print("invalid url")
+                return "Invalid URL"
             }
         } else {
-            print("something else")
+            return "Unknown error occured"
         }
     }
 }
