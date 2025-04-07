@@ -22,6 +22,8 @@ enum Asset {
     
     enum Text {
         static let defaultLanguage = "No information about language"
+        static let selectionPlaceholder = "Please select a project you want to know more about."
+        static let navigationTitle = "Trending Projects"
     }
     
     enum Color {

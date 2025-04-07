@@ -20,7 +20,7 @@ struct MainView: View {
             case .failure(let message):
                 ErrorView(viewModel: projectsVM, message: message)
             case .success(let projects):
-                Projects(projects: projects, darkMode: $darkMode)
+                ProjectsView(darkMode: $darkMode, projects: projects)
             }
         }
         .task {

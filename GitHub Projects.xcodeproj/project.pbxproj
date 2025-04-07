@@ -34,7 +34,6 @@
 		A772B2102DA1BEE600DDAACC /* PairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B20F2DA1BEE600DDAACC /* PairView.swift */; };
 		A772B2122DA1C05900DDAACC /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2112DA1C05900DDAACC /* LanguageView.swift */; };
 		A772B2142DA2818200DDAACC /* LightDarkModeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2132DA2818200DDAACC /* LightDarkModeButton.swift */; };
-		A772B2162DA2BF3A00DDAACC /* Projects.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2152DA2BF3A00DDAACC /* Projects.swift */; };
 		A772B2182DA2C54A00DDAACC /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2172DA2C54A00DDAACC /* ErrorView.swift */; };
 		A772B21C2DA30AA400DDAACC /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B21B2DA30AA400DDAACC /* MockError.swift */; };
 		A772B21E2DA30ACE00DDAACC /* MockHTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B21D2DA30ACE00DDAACC /* MockHTTPService.swift */; };
@@ -45,6 +44,7 @@
 		A772B2282DA30DA000DDAACC /* EndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2272DA30DA000DDAACC /* EndpointTests.swift */; };
 		A772B22A2DA30E5700DDAACC /* DefaultHTTPServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2292DA30E5700DDAACC /* DefaultHTTPServiceTests.swift */; };
 		A772B22C2DA30F2A00DDAACC /* DefaultProjectRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B22B2DA30F2A00DDAACC /* DefaultProjectRepositoryTests.swift */; };
+		A77A7BED2DA3E02300380173 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77A7BEC2DA3E01B00380173 /* ProjectsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +95,6 @@
 		A772B20F2DA1BEE600DDAACC /* PairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairView.swift; sourceTree = "<group>"; };
 		A772B2112DA1C05900DDAACC /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		A772B2132DA2818200DDAACC /* LightDarkModeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDarkModeButton.swift; sourceTree = "<group>"; };
-		A772B2152DA2BF3A00DDAACC /* Projects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Projects.swift; sourceTree = "<group>"; };
 		A772B2172DA2C54A00DDAACC /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A772B21B2DA30AA400DDAACC /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		A772B21D2DA30ACE00DDAACC /* MockHTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPService.swift; sourceTree = "<group>"; };
@@ -106,6 +105,7 @@
 		A772B2272DA30DA000DDAACC /* EndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointTests.swift; sourceTree = "<group>"; };
 		A772B2292DA30E5700DDAACC /* DefaultHTTPServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHTTPServiceTests.swift; sourceTree = "<group>"; };
 		A772B22B2DA30F2A00DDAACC /* DefaultProjectRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProjectRepositoryTests.swift; sourceTree = "<group>"; };
+		A77A7BEC2DA3E01B00380173 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,8 +239,8 @@
 		A772B1FC2DA14BE400DDAACC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A77A7BEC2DA3E01B00380173 /* ProjectsView.swift */,
 				A772B1FD2DA14C1200DDAACC /* MainView.swift */,
-				A772B2152DA2BF3A00DDAACC /* Projects.swift */,
 				A772B1FF2DA14C2200DDAACC /* ProjectDetails.swift */,
 				A772B2042DA18CAA00DDAACC /* TrendingProjectCell.swift */,
 				A772B2092DA1A77D00DDAACC /* Loader.swift */,
@@ -410,7 +410,6 @@
 				A772B1FB2DA145DC00DDAACC /* DefaultHTTPService.swift in Sources */,
 				A772B1F22DA0580200DDAACC /* ProjectEndpoint.swift in Sources */,
 				A772B20E2DA1B47A00DDAACC /* Asset.swift in Sources */,
-				A772B2162DA2BF3A00DDAACC /* Projects.swift in Sources */,
 				A75C0CF52D97DB0300FABEF1 /* URLSessionProtocol.swift in Sources */,
 				A75C0CF32D97DAD100FABEF1 /* URLSession+Extensions.swift in Sources */,
 				A772B1FE2DA14C1200DDAACC /* MainView.swift in Sources */,
@@ -430,6 +429,7 @@
 				A772B1EE2DA04C2400DDAACC /* ProjectRepository.swift in Sources */,
 				A75C0CF12D97D8D400FABEF1 /* HTTPService.swift in Sources */,
 				A772B2052DA18CAA00DDAACC /* TrendingProjectCell.swift in Sources */,
+				A77A7BED2DA3E02300380173 /* ProjectsView.swift in Sources */,
 				A75C0CBD2D97D62F00FABEF1 /* GitHubProjectsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

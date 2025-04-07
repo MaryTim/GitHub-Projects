@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Project: Codable, Identifiable, Equatable {
+struct Project: Codable, Identifiable, Equatable, Hashable {
     
     var id: String { "\(author)/\(name)" }
     let author: String
@@ -23,7 +23,7 @@ struct Project: Codable, Identifiable, Equatable {
     let builtBy: [Author]
 }
 
-struct Author: Codable, Identifiable, Equatable {
+struct Author: Codable, Identifiable, Equatable, Hashable {
     var id: String { username }
     let username: String
     let href: String
