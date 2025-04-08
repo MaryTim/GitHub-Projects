@@ -38,17 +38,17 @@ class ProjectsViewModel: ObservableObject {
         if let repositoryError = error as? ProjectRepositoryError {
             switch repositoryError {
             case .fetchFailure:
-                return "Failed to fetch data. Please try again later"
+                return Asset.Text.fetchingError
             case .decodeFailure:
-                return "Failed to decode data"
+                return Asset.Text.decodingError
             }
         } else if let httperror = error as? HTTPError {
             switch httperror {
             case .invalidUrl:
-                return "Invalid URL"
+                return Asset.Text.invalidUrlError
             }
         } else {
-            return "Unknown error occured"
+            return Asset.Text.unknownError
         }
     }
 }

@@ -31,6 +31,10 @@ enum Asset {
         static let language = "Language:"
         static let createdAt = "Created at:"
         static let updatedAt = "Updated at:"
+        static let fetchingError = "Failed to fetch data. Please try again later"
+        static let decodingError = "Failed to decode data"
+        static let invalidUrlError = "Invalid URL"
+        static let unknownError = "Unknown error occured"
     }
     
     enum Color {
