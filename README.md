@@ -2,6 +2,7 @@ Before and even during the process of working on this app, I spent quite some ti
 
 Here’s a quick overview of the options I was thinking about:
 1. Scraping
+   
    I think it might be the only way to get the exact data which was required, but I think there are more cons then pros of using it.
    - There are no guarantess GitHub page won't be changed tomorrow and my app would work.
    - It could violate GitHub's Terms and Policies
