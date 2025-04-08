@@ -7,17 +7,34 @@
 
 import SwiftUI
 
-struct ProjectsView: View {
+struct PickerAndProjectsView: View {
     
+    @Binding var selectedPeriod: Period
     @Binding var darkMode: Bool
+    @ObservedObject var projectsVM: ProjectsViewModel
     @State private var columnVisibility = NavigationSplitViewVisibility.all
     let projects: [Project]
     
     var body: some View {
         NavigationSplitView(columnVisibility: $columnVisibility) {
-            ProjectsList(darkMode: $darkMode, projects: projects)
-            .navigationTitle(Text(Asset.Text.navigationTitle))
-            .navigationBarTitleDisplayMode(.inline)
+            VStack {
+                Picker("Trending", selection: $selectedPeriod) {
+                    Text(Asset.Text.segment1).tag(Period.week)
+                    Text(Asset.Text.segment2).tag(Period.month)
+                }
+                .padding()
+                .pickerStyle(.segmented)
+                .onChange(of: selectedPeriod, { _, _ in
+                    Task {
+                        await projectsVM.fetchProjects(from: selectedPeriod.fromDate)
+                    }
+                })
+                
+                ProjectsList(darkMode: $darkMode, projects: projects)
+                    .navigationTitle(Text(Asset.Text.navigationTitle))
+                    .navigationBarTitleDisplayMode(.inline)
+            }
+            .background(Color(Asset.Color.backgroundColor))
         } detail: {
             Text(Asset.Text.selectionPlaceholder)
                 .multilineTextAlignment(.center)
@@ -36,7 +53,7 @@ struct ProjectsList: View {
         ZStack {
             Color(Asset.Color.backgroundColor)
                 .ignoresSafeArea()
-            List(projects) { project in
+            List(projects, id: \.id) { project in
                 NavigationLink {
                     ProjectDetails(project: project)
                 } label: {

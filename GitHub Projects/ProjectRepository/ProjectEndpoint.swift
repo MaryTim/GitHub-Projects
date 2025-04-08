@@ -9,27 +9,32 @@ import Foundation
 
 enum ProjectEndpoint: Endpoint {
     
-    case project
+    case project(from: Date)
     
     var scheme: String {
         "https"
     }
     
     var host: String {
-        "github-trending-api.de.a9sapp.eu"
+        "api.github.com"
     }
     
     var path: String {
         switch self {
         case .project:
-            return "/"
+            return "/search/repositories"
         }
     }
     
     var queryItems: [String : String?]? {
         switch self {
-        case .project:
-            nil
+        case .project(let date):
+            let formatter = DateFormatter()
+            formatter.timeZone = TimeZone(abbreviation: "UTC")
+            formatter.dateFormat = "yyyy-MM-dd"
+            return ["q" : "created:>\(formatter.string(from: date))",
+                    "sort" : "stars",
+                    "order": "desc"]
         }
     }
     

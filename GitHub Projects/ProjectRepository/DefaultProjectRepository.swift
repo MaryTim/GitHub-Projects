@@ -15,25 +15,26 @@ struct DefaultProjectRepository: ProjectRepository {
         self.httpService = httpService
     }
     
-    func fetchProjects() async throws -> [Project] {
-        let data = try await fetchData()
+    func fetchProjects(from date: Date) async throws -> ProjectsResponse {
+        let data = try await fetchData(from: date)
         return try decode(data)
     }
 }
 
 extension DefaultProjectRepository {
-    private func fetchData() async throws -> Data {
+    private func fetchData(from date: Date) async throws -> Data {
         do {
-            return try await httpService.fetchData(for: ProjectEndpoint.project)
+            return try await httpService.fetchData(for: ProjectEndpoint.project(from: date))
         } catch {
             throw ProjectRepositoryError.fetchFailure
         }
     }
     
-    private func decode(_ data: Data) throws -> [Project] {
+    private func decode(_ data: Data) throws -> ProjectsResponse {
         do {
             let decoder = JSONDecoder()
-            return try decoder.decode([Project].self, from: data)
+            decoder.dateDecodingStrategy = .iso8601
+            return try decoder.decode(ProjectsResponse.self, from: data)
         } catch {
             throw ProjectRepositoryError.decodeFailure
         }

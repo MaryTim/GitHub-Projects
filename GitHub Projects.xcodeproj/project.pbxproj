@@ -32,12 +32,11 @@
 		A772B20A2DA1A77D00DDAACC /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2092DA1A77D00DDAACC /* Loader.swift */; };
 		A772B20E2DA1B47A00DDAACC /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B20D2DA1B47A00DDAACC /* Asset.swift */; };
 		A772B2102DA1BEE600DDAACC /* PairView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B20F2DA1BEE600DDAACC /* PairView.swift */; };
-		A772B2122DA1C05900DDAACC /* LanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2112DA1C05900DDAACC /* LanguageView.swift */; };
 		A772B2142DA2818200DDAACC /* LightDarkModeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2132DA2818200DDAACC /* LightDarkModeButton.swift */; };
 		A772B2182DA2C54A00DDAACC /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2172DA2C54A00DDAACC /* ErrorView.swift */; };
 		A772B21C2DA30AA400DDAACC /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B21B2DA30AA400DDAACC /* MockError.swift */; };
 		A772B21E2DA30ACE00DDAACC /* MockHTTPService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B21D2DA30ACE00DDAACC /* MockHTTPService.swift */; };
-		A772B2202DA30B4000DDAACC /* Project+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B21F2DA30B4000DDAACC /* Project+Stub.swift */; };
+		A772B2202DA30B4000DDAACC /* ProjectsResponse+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B21F2DA30B4000DDAACC /* ProjectsResponse+Stub.swift */; };
 		A772B2222DA30C6100DDAACC /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2212DA30C6100DDAACC /* MockURLSession.swift */; };
 		A772B2242DA30C9800DDAACC /* MockProjectRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2232DA30C9800DDAACC /* MockProjectRepository.swift */; };
 		A772B2262DA30D3C00DDAACC /* MockEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2252DA30D3C00DDAACC /* MockEndpoint.swift */; };
@@ -45,6 +44,10 @@
 		A772B22A2DA30E5700DDAACC /* DefaultHTTPServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B2292DA30E5700DDAACC /* DefaultHTTPServiceTests.swift */; };
 		A772B22C2DA30F2A00DDAACC /* DefaultProjectRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A772B22B2DA30F2A00DDAACC /* DefaultProjectRepositoryTests.swift */; };
 		A77A7BED2DA3E02300380173 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77A7BEC2DA3E01B00380173 /* ProjectsView.swift */; };
+		A77A7BEF2DA4112C00380173 /* Period.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77A7BEE2DA4112500380173 /* Period.swift */; };
+		A77A7BF32DA4284E00380173 /* ProjectsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77A7BF22DA4284E00380173 /* ProjectsResponse.swift */; };
+		A77A7BF52DA4397500380173 /* TopicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77A7BF42DA4397500380173 /* TopicView.swift */; };
+		A77A7BF72DA511DC00380173 /* Project+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77A7BF62DA511DC00380173 /* Project+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,12 +96,11 @@
 		A772B2092DA1A77D00DDAACC /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		A772B20D2DA1B47A00DDAACC /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		A772B20F2DA1BEE600DDAACC /* PairView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairView.swift; sourceTree = "<group>"; };
-		A772B2112DA1C05900DDAACC /* LanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageView.swift; sourceTree = "<group>"; };
 		A772B2132DA2818200DDAACC /* LightDarkModeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDarkModeButton.swift; sourceTree = "<group>"; };
 		A772B2172DA2C54A00DDAACC /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		A772B21B2DA30AA400DDAACC /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		A772B21D2DA30ACE00DDAACC /* MockHTTPService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHTTPService.swift; sourceTree = "<group>"; };
-		A772B21F2DA30B4000DDAACC /* Project+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Stub.swift"; sourceTree = "<group>"; };
+		A772B21F2DA30B4000DDAACC /* ProjectsResponse+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProjectsResponse+Stub.swift"; sourceTree = "<group>"; };
 		A772B2212DA30C6100DDAACC /* MockURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		A772B2232DA30C9800DDAACC /* MockProjectRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProjectRepository.swift; sourceTree = "<group>"; };
 		A772B2252DA30D3C00DDAACC /* MockEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEndpoint.swift; sourceTree = "<group>"; };
@@ -106,6 +108,10 @@
 		A772B2292DA30E5700DDAACC /* DefaultHTTPServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHTTPServiceTests.swift; sourceTree = "<group>"; };
 		A772B22B2DA30F2A00DDAACC /* DefaultProjectRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultProjectRepositoryTests.swift; sourceTree = "<group>"; };
 		A77A7BEC2DA3E01B00380173 /* ProjectsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsView.swift; sourceTree = "<group>"; };
+		A77A7BEE2DA4112500380173 /* Period.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Period.swift; sourceTree = "<group>"; };
+		A77A7BF22DA4284E00380173 /* ProjectsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsResponse.swift; sourceTree = "<group>"; };
+		A77A7BF42DA4397500380173 /* TopicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicView.swift; sourceTree = "<group>"; };
+		A77A7BF62DA511DC00380173 /* Project+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +166,7 @@
 				A772B2012DA1502100DDAACC /* ViewModels */,
 				A772B1FC2DA14BE400DDAACC /* Views */,
 				A772B1F52DA059BB00DDAACC /* Models */,
-				A772B1EC2DA04C0000DDAACC /* Repository */,
+				A772B1EC2DA04C0000DDAACC /* ProjectRepository */,
 				A75C0CE92D97D7FD00FABEF1 /* Networking */,
 				A772B20C2DA1B45F00DDAACC /* Style */,
 				A772B20B2DA1B44A00DDAACC /* Extensions */,
@@ -183,7 +189,7 @@
 			children = (
 				A772B21B2DA30AA400DDAACC /* MockError.swift */,
 				A772B21D2DA30ACE00DDAACC /* MockHTTPService.swift */,
-				A772B21F2DA30B4000DDAACC /* Project+Stub.swift */,
+				A772B21F2DA30B4000DDAACC /* ProjectsResponse+Stub.swift */,
 				A772B2212DA30C6100DDAACC /* MockURLSession.swift */,
 				A772B2232DA30C9800DDAACC /* MockProjectRepository.swift */,
 				A772B2252DA30D3C00DDAACC /* MockEndpoint.swift */,
@@ -217,7 +223,7 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		A772B1EC2DA04C0000DDAACC /* Repository */ = {
+		A772B1EC2DA04C0000DDAACC /* ProjectRepository */ = {
 			isa = PBXGroup;
 			children = (
 				A772B1ED2DA04C2400DDAACC /* ProjectRepository.swift */,
@@ -225,13 +231,16 @@
 				A772B1F12DA0580200DDAACC /* ProjectEndpoint.swift */,
 				A772B1F32DA0596300DDAACC /* DefaultProjectRepository.swift */,
 			);
-			path = Repository;
+			path = ProjectRepository;
 			sourceTree = "<group>";
 		};
 		A772B1F52DA059BB00DDAACC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A77A7BEE2DA4112500380173 /* Period.swift */,
 				A772B1F82DA1419600DDAACC /* Project.swift */,
+				A77A7BF22DA4284E00380173 /* ProjectsResponse.swift */,
+				A77A7BF62DA511DC00380173 /* Project+Extensions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -239,15 +248,15 @@
 		A772B1FC2DA14BE400DDAACC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A77A7BEC2DA3E01B00380173 /* ProjectsView.swift */,
 				A772B1FD2DA14C1200DDAACC /* MainView.swift */,
+				A77A7BEC2DA3E01B00380173 /* ProjectsView.swift */,
 				A772B1FF2DA14C2200DDAACC /* ProjectDetails.swift */,
 				A772B2042DA18CAA00DDAACC /* TrendingProjectCell.swift */,
 				A772B2092DA1A77D00DDAACC /* Loader.swift */,
 				A772B20F2DA1BEE600DDAACC /* PairView.swift */,
-				A772B2112DA1C05900DDAACC /* LanguageView.swift */,
 				A772B2132DA2818200DDAACC /* LightDarkModeButton.swift */,
 				A772B2172DA2C54A00DDAACC /* ErrorView.swift */,
+				A77A7BF42DA4397500380173 /* TopicView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -408,6 +417,7 @@
 			files = (
 				A772B2182DA2C54A00DDAACC /* ErrorView.swift in Sources */,
 				A772B1FB2DA145DC00DDAACC /* DefaultHTTPService.swift in Sources */,
+				A77A7BF32DA4284E00380173 /* ProjectsResponse.swift in Sources */,
 				A772B1F22DA0580200DDAACC /* ProjectEndpoint.swift in Sources */,
 				A772B20E2DA1B47A00DDAACC /* Asset.swift in Sources */,
 				A75C0CF52D97DB0300FABEF1 /* URLSessionProtocol.swift in Sources */,
@@ -416,7 +426,8 @@
 				A772B2142DA2818200DDAACC /* LightDarkModeButton.swift in Sources */,
 				A772B1F02DA057B700DDAACC /* ProjectRepositoryError.swift in Sources */,
 				A772B2002DA14C2200DDAACC /* ProjectDetails.swift in Sources */,
-				A772B2122DA1C05900DDAACC /* LanguageView.swift in Sources */,
+				A77A7BF52DA4397500380173 /* TopicView.swift in Sources */,
+				A77A7BEF2DA4112C00380173 /* Period.swift in Sources */,
 				A772B1F42DA0596300DDAACC /* DefaultProjectRepository.swift in Sources */,
 				A772B2032DA1503500DDAACC /* ProjectsViewModel.swift in Sources */,
 				A75C0CED2D97D83D00FABEF1 /* HTTPMethod.swift in Sources */,
@@ -425,6 +436,7 @@
 				A75C0CEB2D97D81100FABEF1 /* Endpoint.swift in Sources */,
 				A75C0CEF2D97D89000FABEF1 /* HTTPError.swift in Sources */,
 				A772B2072DA18F9700DDAACC /* Color+Extensions.swift in Sources */,
+				A77A7BF72DA511DC00380173 /* Project+Extensions.swift in Sources */,
 				A772B20A2DA1A77D00DDAACC /* Loader.swift in Sources */,
 				A772B1EE2DA04C2400DDAACC /* ProjectRepository.swift in Sources */,
 				A75C0CF12D97D8D400FABEF1 /* HTTPService.swift in Sources */,
@@ -441,7 +453,7 @@
 				A772B22A2DA30E5700DDAACC /* DefaultHTTPServiceTests.swift in Sources */,
 				A772B22C2DA30F2A00DDAACC /* DefaultProjectRepositoryTests.swift in Sources */,
 				A772B21E2DA30ACE00DDAACC /* MockHTTPService.swift in Sources */,
-				A772B2202DA30B4000DDAACC /* Project+Stub.swift in Sources */,
+				A772B2202DA30B4000DDAACC /* ProjectsResponse+Stub.swift in Sources */,
 				A772B2282DA30DA000DDAACC /* EndpointTests.swift in Sources */,
 				A772B2262DA30D3C00DDAACC /* MockEndpoint.swift in Sources */,
 				A772B21C2DA30AA400DDAACC /* MockError.swift in Sources */,

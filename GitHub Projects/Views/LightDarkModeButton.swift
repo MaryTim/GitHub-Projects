@@ -13,7 +13,9 @@ struct LightDarkModeButton: View {
     
     var body: some View {
         Button(action: {
-            self.darkMode.toggle()
+            withAnimation {
+                self.darkMode.toggle()
+            }
         }) {
             Image(systemName: darkMode ? Asset.Image.light : Asset.Image.dark)
         }

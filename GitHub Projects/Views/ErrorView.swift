@@ -11,6 +11,7 @@ struct ErrorView: View {
     
     @ObservedObject var viewModel: ProjectsViewModel
     let message: String
+    let period: Period
     
     var body: some View {
         ZStack {
@@ -25,9 +26,9 @@ struct ErrorView: View {
                     .clipped()
                 Text(message)
                     .multilineTextAlignment(.center)
-                Button("Try again") {
+                Button(Asset.Text.retryButton) {
                     Task {
-                        await viewModel.fetchProjects()
+                        await viewModel.fetchProjects(from: period.fromDate)
                     }
                 }
                 .tint(.secondary)

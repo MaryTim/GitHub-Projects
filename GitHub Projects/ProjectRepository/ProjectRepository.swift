@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ProjectRepository {
-    func fetchProjects() async throws -> [Project]
+    func fetchProjects(from date: Date) async throws -> ProjectsResponse
 }

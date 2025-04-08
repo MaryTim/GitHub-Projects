@@ -12,11 +12,11 @@ struct MockProjectRepository: ProjectRepository {
     
     let shouldFail: Bool
     
-    func fetchProjects() async throws -> [GitHub_Projects.Project] {
+    func fetchProjects(from date: Date) async throws -> GitHub_Projects.ProjectsResponse {
         if shouldFail {
             throw MockError.mockError
         } else {
-            return Project.stub
+            return ProjectsResponse.stub
         }
     }
 }

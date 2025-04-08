@@ -20,11 +20,15 @@ struct TrendingProjectCell: View {
                 Text(project.name)
                     .font(.headline)
             }
-            Text(project.description)
+            
+            if let description = project.description, !description.isEmpty {
+                Text(description)
+            }
+            
             HStack {
-                LanguageView(project: project)
+                Text(project.language ?? Asset.Text.defaultLanguage)
                 Spacer()
-                PairView(project: project,
+                PairView(text: String(project.stargazersCount),
                          imageName: Asset.Image.star)
             }
         }

@@ -11,6 +11,7 @@ struct MainView: View {
     
     @StateObject var projectsVM: ProjectsViewModel
     @Binding var darkMode: Bool
+    @State var selectedPeriod: Period = .week
     
     var body: some View {
         Group {
@@ -18,13 +19,19 @@ struct MainView: View {
             case .loading:
                 Loader()
             case .failure(let message):
-                ErrorView(viewModel: projectsVM, message: message)
+                ErrorView(viewModel: projectsVM,
+                          message: message,
+                          period: selectedPeriod)
             case .success(let projects):
-                ProjectsView(darkMode: $darkMode, projects: projects)
+                PickerAndProjectsView(selectedPeriod: $selectedPeriod,
+                             darkMode: $darkMode,
+                             projectsVM: projectsVM,
+                             projects: projects)
             }
         }
         .task {
-            await projectsVM.fetchProjects()
+            let fromDate = selectedPeriod.fromDate
+            await projectsVM.fetchProjects(from: fromDate)
         }
     }
 }

@@ -9,14 +9,14 @@ import SwiftUI
 
 struct PairView: View {
     
-    let project: Project
+    let text: String
     let imageName: String
     
     var body: some View {
         HStack(spacing: 8) {
             Image(systemName: imageName)
                 .frame(width: 15, height: 15)
-            Text("\(project.stars)")
+            Text(text)
         }
     }
 }

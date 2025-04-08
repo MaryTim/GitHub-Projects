@@ -23,11 +23,11 @@ class ProjectsViewModel: ObservableObject {
         self.repository = repository
     }
     
-    func fetchProjects() async {
+    func fetchProjects(from date: Date) async {
         do {
             self.status = .loading
-            let result = try await repository.fetchProjects()
-            self.status = .success(result)
+            let result = try await repository.fetchProjects(from: date)
+            self.status = .success(result.items)
         } catch {
             let message = handleError(error)
             self.status = .failure(message)

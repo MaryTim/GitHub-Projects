@@ -12,8 +12,9 @@ import Foundation
 struct MockHTTPService: HTTPService {
     
     func fetchData<T>(for endpoint: T) async throws -> Data where T : Endpoint {
-        let mockModel = Project.stub
+        let mockModel = ProjectsResponse.stub
         let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .iso8601
         return try encoder.encode(mockModel)
     }
 }

@@ -21,15 +21,15 @@ final class EndpointTests: XCTestCase {
     }
     
     func testMakeUrlReturnsCorrectUrl() throws {
-        let expectedURL = URL(string: "https://github-trending-api.de.a9sapp.eu/?key=value")!
         let result = try sut.makeUrl()
+        let expectedURL = URL(string: "https://api.github.com/search/repositories?key=value")!
         XCTAssertEqual(expectedURL, result)
     }
     
     func testMakeURLRequestReturnsURLRequest() throws {
         let result = try sut.makeUrlRequest()
         XCTAssertEqual(result.httpMethod, "GET")
-        XCTAssertEqual(result.url, URL(string: "https://github-trending-api.de.a9sapp.eu/?key=value")!)
+        XCTAssertEqual(result.url, URL(string: "https://api.github.com/search/repositories?key=value")!)
         XCTAssertEqual(result.httpBody, "testString".data(using: .utf8))
         XCTAssertEqual(result.allHTTPHeaderFields, ["key": "value"])
     }

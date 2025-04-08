@@ -10,9 +10,9 @@ import Foundation
 
 struct MockEndpoint: Endpoint {
     var scheme = "https"
-    var host = "github-trending-api.de.a9sapp.eu"
-    var path = "/"
-    var queryItems: [String : String?]? = ["key": "value"]
+    var host = "api.github.com"
+    var path = "/search/repositories"
+    var queryItems: [String : String?]? = ["key" : "value"]
     var httpMethod: HTTPMethod = .get
     var headerFields: [String : String]? = ["key": "value"]
     var body: Data? = "testString".data(using: .utf8)
