@@ -13,7 +13,7 @@ struct PairView: View {
     let imageName: String
     
     var body: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: 10) {
             Image(systemName: imageName)
                 .frame(width: 15, height: 15)
             Text(text)
